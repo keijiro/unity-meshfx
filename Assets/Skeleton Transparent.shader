@@ -24,7 +24,7 @@
             {
                 v2f o;
                 float4 pos = v.vertex;
-                pos.xyz += v.normal.xyz * _Offset;
+//                pos.xyz += v.normal.xyz * _Offset;
                 o.pos = mul (UNITY_MATRIX_MVP, pos);
                 return o;
             }

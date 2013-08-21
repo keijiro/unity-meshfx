@@ -3,12 +3,7 @@ using System.Collections;
 
 public class SimpleRotation : MonoBehaviour
 {
-    float spin;
-
-    void Awake ()
-    {
-        spin = Random.Range (-90.0f, 90.0f);
-    }
+    public float spin;
 
     void Update ()
     {

@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Unity Web Player | MeshFx</title>
 		<script type='text/javascript' src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
 		<script type="text/javascript">
 		<!--
@@ -15,19 +16,19 @@
 		<!--
 			var config = {
 				width: 800, 
-				height: 600,
+				height: 450,
 				params: { enableDebugging:"0" }
 				
 			};
 			var u = new UnityObject2(config);
-
+			
 			jQuery(function() {
 
 				var $missingScreen = jQuery("#unityPlayer").find(".missing");
 				var $brokenScreen = jQuery("#unityPlayer").find(".broken");
 				$missingScreen.hide();
 				$brokenScreen.hide();
-				
+
 				u.observeProgress(function (progress) {
 					switch(progress.pluginStatus) {
 						case "broken":
@@ -63,15 +64,15 @@
 		<!--
 		body {
 			font-family: Helvetica, Verdana, Arial, sans-serif;
-			background-color: white;
-			color: black;
+			background-color: #eee;
+			color: white;
 			text-align: center;
 		}
 		a:link, a:visited {
-			color: #000;
+			color: #bfbfbf;
 		}
 		a:active, a:hover {
-			color: #666;
+			color: #bfbfbf;
 		}
 		p.header {
 			font-size: small;
@@ -108,7 +109,7 @@
 		}
 		div#unityPlayer {
 			cursor: default;
-			height: 600px;
+			height: 450px;
 			width: 800px;
 		}
 		-->
@@ -120,11 +121,6 @@
 				<div class="missing">
 					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
 						<img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
-					</a>
-				</div>
-				<div class="broken">
-					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now! Restart your browser after install.">
-						<img alt="Unity Web Player. Install now! Restart your browser after install." src="http://webplayer.unity3d.com/installation/getunityrestart.png" width="193" height="63" />
 					</a>
 				</div>
 			</div>

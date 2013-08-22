@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Skeleton Transparent
+  m_Name: Wire
   m_Shader: {fileID: 4800000, guid: 09ac1fd36ed334a67bc5627a4092ebec, type: 3}
   m_ShaderKeywords: []
   m_SavedProperties:
@@ -28,4 +28,4 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .45588237, g: .45588237, b: .45588237, a: .478431374}
+        second: {r: .492647052, g: .492647052, b: .492647052, a: .56078434}

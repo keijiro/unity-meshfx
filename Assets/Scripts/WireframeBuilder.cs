@@ -1,16 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Skeletonizer : MonoBehaviour
+public class WireframeBuilder : MonoBehaviour
 {
     void Awake ()
     {
         var meshFilter = GetComponent<MeshFilter> ();
         var sourceMesh = meshFilter.mesh;
-        var newMesh = new Mesh ();
-
-        newMesh.vertices = sourceMesh.vertices;
-        newMesh.normals = sourceMesh.normals;
 
         var sourceTriangles = sourceMesh.triangles;
         var newTriangles = new int[sourceTriangles.Length * 2];
@@ -24,8 +20,8 @@ public class Skeletonizer : MonoBehaviour
             newTriangles [2 * i + 5] = sourceTriangles [i + 0];
         }
 
-        newMesh.SetIndices (newTriangles, MeshTopology.Lines, 0);
 
-        meshFilter.mesh = newMesh;
+        sourceMesh.subMeshCount = 2;
+        sourceMesh.SetIndices (newTriangles, MeshTopology.Lines, 1);
     }
 }
